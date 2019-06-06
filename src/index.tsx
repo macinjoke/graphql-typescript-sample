@@ -4,4 +4,4 @@ import App from './components/App'
 
 const element = document.getElementById('app')
 
-render(<App />, element)
+render(<App hoge="hooooooo"/>, element)
