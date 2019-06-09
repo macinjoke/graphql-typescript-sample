@@ -8,9 +8,11 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "graphql-codegen": "graphql-codegen --config codegen.yml"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.2.1",
     "@types/graphql": "^14.2.0",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
@@ -26,7 +28,10 @@
     "typescript": "^3.5.1",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.6.0"
+    "webpack-dev-server": "^3.6.0",
+    "@graphql-codegen/typescript": "1.2.1",
+    "@graphql-codegen/typescript-operations": "1.2.1",
+    "@graphql-codegen/typescript-react-apollo": "1.2.1"
   },
   "dependencies": {
     "apollo": "^2.12.5",
