@@ -1,13 +1,15 @@
-ts-graphql-plugin 効かねえ。
-設定方法は他のリポジトリ見るにこんな感じでいいはずなのに、Pycharm でも VSCode でも効かねえ
+# graphql-typescript-sample
+
+GraphQL と TypeScript のサンプル。GraphQLのスキーマとTypeScript の型がキマるベストな開発体験を模索
 
 
-```json
-"plugins": [
-  {
-    "name": "ts-graphql-plugin",
-    "schema": "schema.json",
-    "tag": "gql"
-  }
-]
+# SETUP
+
+```shell
+$ yarn 
 ```
+
+`schema.graphql` をプロジェクト直下に配置
+`config/local.json` を編集
+
+今回はKibelaのAPIを使ってみる。

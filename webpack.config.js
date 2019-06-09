@@ -1,4 +1,7 @@
 const webpack = require('webpack')
+const config = require('./config/local')
+
+console.log(config)
 
 module.exports = {
   mode: 'development',
@@ -15,6 +18,11 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js'],
     modules: [__dirname, 'node_modules'],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      CONFIG: JSON.stringify(config),
+    }),
+  ],
   devServer: {
     contentBase: 'dist',
     historyApiFallback: true,
