@@ -1,9 +1,8 @@
-overwrite: true
 schema: "schema.graphql"
-documents: "**/*.graphql"
 generates:
-  src/generated/graphql.ts:
+  ./src/types/graphql.d.ts:
     plugins:
       - "typescript"
       - "typescript-operations"
-      - "typescript-react-apollo"
+#      - "typescript-react-apollo" 何故か失敗
+

@@ -3,6 +3,11 @@ import gql from 'graphql-tag'
 import { print as printGql } from 'graphql/language/printer'
 
 import { CONFIG } from '../constants'
+import { Query } from 'src/types/graphql'
+
+interface QueryResult {
+  data: Query
+}
 
 const query = gql`
   {
@@ -48,8 +53,12 @@ class App extends React.Component<Props> {
         variables: {},
       }),
     })
-    const data = await res.json()
-    console.log(data)
+    const json: QueryResult = await res.json()
+    console.log(json)
+    console.log(json.data)
+    console.log(json.data.budget.cost)
+    console.log(json.data.budget.cost)
+    // console.log(json.data.currentUser.account)
   }
 }
 
